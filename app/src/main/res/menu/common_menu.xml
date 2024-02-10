@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Refresh"
+        android:icon="@drawable/ic_refresh_white"
+        android:alphabeticShortcut="r"
+        android:id="@+id/menu_refresh"
+        app:showAsAction="ifRoom"
+        app:itemIconTint="@color/white" />
+
+
+    <group android:id="@+id/group_profile_logout" > <!-- Grouping starts here -->
+        <item android:title="Update Profile"
+            android:id="@+id/menu_update_profile"
+            app:itemIconTint="@color/white" />
+
+        <item android:title="Logout"
+            android:id="@+id/menu_logout"
+            app:itemIconTint="@color/white" />
+    </group> <!-- Grouping ends here -->
+</menu>

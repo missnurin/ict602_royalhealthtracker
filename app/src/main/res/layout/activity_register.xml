@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:fontFamily="@font/alice"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="20dp">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/converterToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:titleTextColor="@color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <!-- CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/converterToolbar"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp"
+            android:background="@drawable/border"
+            android:padding="10dp">
+
+            <!--HEADING-->
+
+            <!-- FULL NAME -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/textView_register_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name*"
+                    android:textColor="#555555"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_register_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_register_full_name"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border"
+                    android:hint="Enter your full name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:padding="13dp"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!-- EMAIL -->
+
+            <!--DATE OF BIRTH -->
+            <RelativeLayout
+                android:id="@+id/RL_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/textView_register_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email*"
+                    android:textColor="#555555"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editText_register_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_register_email"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border"
+                    android:hint="Enter your email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:padding="13dp"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RL_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="170dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/textView_register_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="Date of Birth"
+                    android:textColor="#555555"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_register_birth"
+                    android:hint="Enter your birth data (dd/mm/yyyy)"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:textSize="16sp"
+                    android:padding="13dp"
+                    android:textColor="@android:color/black"
+                    android:theme="@style/CustomDatePickerStyle"
+                    android:layout_below="@+id/textView_register_birth"
+                    android:background="@drawable/border"/>
+            </RelativeLayout>
+
+
+            <!--GENDER -->
+            <RelativeLayout
+                android:id="@+id/RL_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="250dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/textView_register_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="Gender"
+                    android:textColor="#555555"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/textView_register_gender"
+                    android:id="@+id/radio_group_register_gender">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radio_female"
+                        android:text="Female"
+                        android:textSize="15sp"
+                        android:textColor="#555555"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radio_male"
+                        android:text="Male"
+                        android:textSize="15sp"
+                        android:textColor="#555555"/>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+            <!--PHONE NUMBER -->
+            <RelativeLayout
+                android:id="@+id/RL_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="330dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/textView_register_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="Phone Number"
+                    android:textColor="#555555"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_register_phone"
+                    android:hint="Enter your phone number"
+                    android:inputType="date"
+                    android:textSize="16sp"
+                    android:padding="13dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/textView_register_phone"
+                    android:background="@drawable/border"/>
+
+
+            </RelativeLayout>
+
+            <!-- PASSWORD -->
+            <RelativeLayout
+                android:id="@+id/RL_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="410dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/textView_register_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="Password*"
+                    android:textColor="#555555"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_register_password"
+                    android:hint="Enter your password"
+                    android:inputType="textPassword"
+                    android:textSize="16sp"
+                    android:padding="13dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/textView_register_password"
+                    android:background="@drawable/border"/>
+
+            </RelativeLayout>
+
+
+            <!-- CONFIRM PASSWORD -->
+            <RelativeLayout
+                android:id="@+id/RL_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="490dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/textView_register_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="Confirm Password*"
+                    android:textColor="#555555"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_register_confirm_password"
+                    android:hint="Confirm your password"
+                    android:inputType="textPassword"
+                    android:textSize="16sp"
+                    android:padding="13dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/textView_register_confirm_password"
+                    android:background="@drawable/border"/>
+
+            </RelativeLayout>
+
+            <!-- REGISTER BUTTON -->
+            <RelativeLayout
+                android:id="@+id/RL_button_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="590dp"
+                android:padding="6dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_register"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Register"/>
+
+            </RelativeLayout>
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="10dp"
+                android:visibility="gone"/>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "954984644184",
+    "firebase_url": "https://royalcare-abf50-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "royalcare-abf50",
+    "storage_bucket": "royalcare-abf50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954984644184:android:e8a6454ed8de83007c542d",
+        "android_client_info": {
+          "package_name": "com.example.royalcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954984644184-e5tc6n000ggt7snco4i198i3f8drb6ib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.royalcare",
+            "certificate_hash": "654670c5c44a2b12ebc4248f397b6f6175f5556e"
+          }
+        },
+        {
+          "client_id": "954984644184-m1ijvm0m0lc8hvk1akh9e0218022hi2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkwbWTc50XIW_RThJhDwJ9ElSXmUEzb6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954984644184-m1ijvm0m0lc8hvk1akh9e0218022hi2m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
